@@ -1,0 +1,144 @@
+/*~~~~~~~~~~~~~~~*\
+  RESET
+\*~~~~~~~~~~~~~~~*/
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*~~~~~~~~~~~~~~~*\
+  CONTENT
+\*~~~~~~~~~~~~~~~*/
+
+.logoSpan {
+  display: block;
+}
+
+.title {
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+@media (min-width: 650px) {
+  .title {
+    font-size: 4.8rem;
+  }
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.noLink {
+  text-decoration: none;
+}
+
+.navStyle, .subHeader {
+  color: #7b8993;
+}
+
+p, hr {
+  margin-bottom: .5rem;
+}
+
+hr {
+  border: none;
+  margin-top: -1px;
+  height: 1px;
+  background-color: #c0c8c9;
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+a:hover {
+  color: #f35626;
+}
+
+.myPhoto, .photoBox {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 650px) {
+  .myPhoto, .photoBox {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/*~~~~~~~~~~~~~~~*\
+  LAYOUT
+\*~~~~~~~~~~~~~~~*/
+
+.wrap {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.navPadding {
+  padding: .25rem;
+}
+
+/*~~~~~~~~~~~~~~~*\
+  BASE
+\*~~~~~~~~~~~~~~~*/
+
+html {
+  font: 100%/1.5 "Roboto", Verdana, sans-serif;
+  color: #3d464d;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow: hidden-x;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  html {
+    height: 100%;
+  }
+
+  html:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  body {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 38rem;
+  }
+}
+
+/*~~~~~~~~~~~~~~~*\
+  ANIMATIONS
+\*~~~~~~~~~~~~~~~*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
