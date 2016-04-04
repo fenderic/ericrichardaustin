@@ -15,8 +15,37 @@
   CONTENT
 \*~~~~~~~~~~~~~~~*/
 
-.logoSpan {
-  display: block;
+h1 {
+  font-size: 2.7rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+p, hr {
+  margin-bottom: .5rem;
+}
+
+hr {
+  border: none;
+  margin-top: -1px;
+  height: 1px;
+  background-color: #c0c8c9;
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+header a {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+a:hover {
+  color: #f35626;
 }
 
 .title {
@@ -33,14 +62,7 @@
   }
 }
 
-h1 {
-  font-size: 2.7rem;
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: -.05em;
-}
-
-.noLink {
+.navStyle a {
   text-decoration: none;
 }
 
@@ -48,39 +70,10 @@ h1 {
   color: #7b8993;
 }
 
-p, hr {
-  margin-bottom: .5rem;
+.me {
+  width: 100%;
 }
 
-hr {
-  border: none;
-  margin-top: -1px;
-  height: 1px;
-  background-color: #c0c8c9;
-  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-  -webkit-animation: hue 60s infinite linear;
-}
-
-a:hover {
-  color: #f35626;
-}
-
-.myPhoto, .photoBox {
-  width: 150px;
-  height: 150px;
-}
-
-@media (min-width: 650px) {
-  .myPhoto, .photoBox {
-    width: 300px;
-    height: 300px;
-  }
-}
 
 /*~~~~~~~~~~~~~~~*\
   LAYOUT
