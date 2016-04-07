@@ -58,12 +58,12 @@ a {
 }
 
 a:hover {
-  color: #f35626;
+  color: #00aee8;
 }
 
 .title {
-  color: #f35626;
-  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  color: #00aee8;
+  background-image: -webkit-linear-gradient(90deg,#00aee8,#47ceff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 60s infinite linear;
@@ -138,11 +138,13 @@ html {
 \*~~~~~~~~~~~~~~~*/
 
 @-webkit-keyframes hue {
-  from {
+  0% {
     -webkit-filter: hue-rotate(0deg);
   }
-
-  to {
-    -webkit-filter: hue-rotate(-360deg);
+  50% {
+    -webkit-filter: hue-rotate(-90deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
   }
 }
