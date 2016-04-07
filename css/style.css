@@ -38,6 +38,19 @@ header a {
   text-decoration: none;
 }
 
+nav {
+  color: #7b8993;
+  padding-bottom: 1.5rem;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+footer {
+  padding-top: 1.5rem;
+}
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -62,12 +75,13 @@ a:hover {
   }
 }
 
-.navStyle a {
-  text-decoration: none;
+.active {
+  color: #4c555c;
 }
 
-.navStyle, .subHeader {
+.subHeader {
   color: #7b8993;
+  padding-top: 1.25rem;
 }
 
 .me {
@@ -82,10 +96,6 @@ a:hover {
 .wrap {
   max-width: 38rem;
   margin: 0 auto;
-}
-
-.navPadding {
-  padding: .25rem;
 }
 
 /*~~~~~~~~~~~~~~~*\
@@ -119,6 +129,7 @@ html {
     display: inline-block;
     vertical-align: middle;
     max-width: 38rem;
+    padding: .25rem;
   }
 }
 
