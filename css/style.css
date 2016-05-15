@@ -105,6 +105,17 @@ figcaption {
   width: 100%;
 }
 
+.work {
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  background-color: yellow;
+  box-shadow: 1px 1px 3px #888888;
+  margin: 10px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: x-large;
+}
 
 /*~~~~~~~~~~~~~~~*\
   LAYOUT
