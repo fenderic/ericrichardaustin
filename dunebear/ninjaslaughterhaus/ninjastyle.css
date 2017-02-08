@@ -1,0 +1,24 @@
+body {
+	background-color: #000;
+}
+
+#thecanvas {
+	cursor: none;
+}
+
+#candiv {
+	cursor: none;
+	width: 960px;
+	height: 544px;
+	margin: 0px auto;
+	border: 50px solid #8F2C2C;
+}
+
+#instructions {
+	padding-top: 50px;
+	color: #FFF;
+	text-align: center;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
