@@ -1,3 +1,20 @@
+:root {
+  --pukeko  : #285A7D;
+  --robin: #b7d5d4;
+  --flamingo: #EFB9CB;
+  --mauve: #611C35;
+  --naranja: #FFA630;
+}
+
+body {
+  background-color: var(--pukeko);
+  color: var(--robin);
+}
+
+h1 {
+  color: var(--white);
+}
+
 /*~~~~~~~~~~~~~~~*\
   CONTENT
 \*~~~~~~~~~~~~~~~*/
@@ -51,7 +68,7 @@ header a {
 }
 
 nav {
-  color: #7b8993;
+  /*color: #7b8993;*/
   padding-bottom: 1.5rem;
 }
 
@@ -64,17 +81,21 @@ footer {
 }
 
 a {
-  color: inherit;
+  color: var(--white);
   text-decoration: underline;
   -webkit-animation: hue 60s infinite linear;
 }
 
 a:hover {
-  color: #00aee8;
+  color: var(--flamingo);
+  /*color: #00aee8;*/
+}
+a:active {
+  color: var(--mauve);
 }
 
 .title {
-  color:#285A7D;
+  /*color:#285A7D;*/
   /*color: #00aee8;
   background-image: -webkit-linear-gradient(90deg,#00aee8,#47ceff);
   -webkit-background-clip: text;
@@ -92,11 +113,11 @@ a:hover {
   }
 }
 .active {
-  color: #4c555c;
+  color: var(--naranja);
 }
 
 h5 {
-  color: #7b8993;
+  color: var(--flamingo);
   padding-top: 1.25rem;
 }
 
@@ -143,8 +164,8 @@ figcaption {
 
 html {
   font: 100%/1.5 "Roboto", Verdana, sans-serif;
-  color: #3d464d;
-  background-color: #fff;
+  /*color: #3d464d;
+  background-color: #fff;*/
   -webkit-font-smoothing: antialiased;
 }
 
