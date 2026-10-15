@@ -113,20 +113,20 @@ var images = {
 		img.onload = function() {
 			deferred.resolve();
 		};
-		img.src = 'images/' + filename;
+		img.src = '/games/ninja/images/' + filename;
 		return deferred.promise();
 	},
 	loadImages: function() {
 		var img_deferreds = new Array();
 		img_deferreds.push(this.loadImage(this.ninja, 'ninja.png'));
 		img_deferreds.push(this.loadImage(this.background, 'city.png'));
-		img_deferreds.push(this.loadImage(this.throwing_star, 'tstar.png'));
-		img_deferreds.push(this.loadImage(this.toad1, 'toad1.png'));
-		img_deferreds.push(this.loadImage(this.toad2, 'toad2.png'));
+		img_deferreds.push(this.loadImage(this.throwing_star, 'throwing-star.png'));
+		img_deferreds.push(this.loadImage(this.toad1, 'toad-1.png'));
+		img_deferreds.push(this.loadImage(this.toad2, 'toad-2.png'));
 		img_deferreds.push(this.loadImage(this.splash, 'splash.png'));
-		img_deferreds.push(this.loadImage(this.splash_star, 'splashstar.png'));
+		img_deferreds.push(this.loadImage(this.splash_star, 'splash-star.png'));
 		img_deferreds.push(this.loadImage(this.cursor, 'cursor.png'));
-		img_deferreds.push(this.loadImage(this.logo, 'dunbeer.png'));
+		img_deferreds.push(this.loadImage(this.logo, 'dunebear-logo.png'));
 		$.when.apply($, img_deferreds).then(
 			startGame, 
 			function() {

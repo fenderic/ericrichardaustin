@@ -13,45 +13,45 @@ var ctx = buffer.getContext("2d");
 var final_ctx = canvas.getContext("2d");
 
 // Audio
-var snow_sounds = new Array(new Audio("audio/cold.mp3"), new Audio(
-		"audio/cold.mp3"), new Audio("audio/cold.mp3"), new Audio(
-		"audio/cold.mp3"));
+var snow_sounds = new Array(new Audio("/games/temperature/audio/cold.mp3"), new Audio(
+		"/games/temperature/audio/cold.mp3"), new Audio("/games/temperature/audio/cold.mp3"), new Audio(
+		"/games/temperature/audio/cold.mp3"));
 
-var fire_sounds = new Array(new Audio("audio/hot.mp3"), new Audio(
-		"audio/hot.mp3"), new Audio("audio/hot.mp3"),
-		new Audio("audio/hot.mp3"));
+var fire_sounds = new Array(new Audio("/games/temperature/audio/hot.mp3"), new Audio(
+		"/games/temperature/audio/hot.mp3"), new Audio("/games/temperature/audio/hot.mp3"),
+		new Audio("/games/temperature/audio/hot.mp3"));
 
-var crash_sounds = new Array(new Audio("audio/pop.mp3"), new Audio(
-		"audio/pop.mp3"), new Audio("audio/pop.mp3"),
-		new Audio("audio/pop.mp3"));
+var crash_sounds = new Array(new Audio("/games/temperature/audio/pop.mp3"), new Audio(
+		"/games/temperature/audio/pop.mp3"), new Audio("/games/temperature/audio/pop.mp3"),
+		new Audio("/games/temperature/audio/pop.mp3"));
 
 console.log("Audio files loaded");
 
 // Images
 var logo = new Image();
-logo.src = "images/dunbeer.png";
+logo.src = "/games/temperature/images/dunebear-logo.png";
 var snow = new Image();
-snow.src = "images/so_cold.png";
+snow.src = "/games/temperature/images/cold-orb.png";
 var fire = new Image();
-fire.src = "images/so_hot.png";
+fire.src = "/games/temperature/images/hot-orb.png";
 var bg = new Image();
-bg.src = "images/backdrop.png";
+bg.src = "/games/temperature/images/background.png";
 var bucket_top = new Image();
-bucket_top.src = "images/pipe_t.png";
+bucket_top.src = "/games/temperature/images/bucket-top.png";
 var bucket_bottom = new Image();
-bucket_bottom.src = "images/pipe_b.png";
+bucket_bottom.src = "/games/temperature/images/bucket-bottom.png";
 var clock = new Image();
-clock.src = "images/ticktock.png";
+clock.src = "/games/temperature/images/clock.png";
 var thermometer = new Image();
-thermometer.src = "images/meter.png";
+thermometer.src = "/games/temperature/images/thermometer.png";
 var greenlight = new Image();
-greenlight.src = "images/greenlight.png";
+greenlight.src = "/games/temperature/images/light-green.png";
 var yellowlight = new Image();
-yellowlight.src = "images/yellowlight.png";
+yellowlight.src = "/games/temperature/images/light-yellow.png";
 var redlight = new Image();
-redlight.src = "images/redlight.png";
+redlight.src = "/games/temperature/images/light-red.png";
 var glare = new Image();
-glare.src = "images/tubeglare.png";
+glare.src = "/games/temperature/images/thermometer-glare.png";
 
 // Variables
 var mouse = {

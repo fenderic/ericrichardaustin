@@ -1,4 +1,5 @@
-# To Do:
+# Temperature TODO
+
 * start game screen
 * end game screen
 * new graphics that match

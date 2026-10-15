@@ -13,15 +13,15 @@ final_ctx.fillText("Loading", 0, 0, 300);
 
 // Images
 var logo = new Image();
-logo.src = "images/introbear.png";
+logo.src = "/games/team-test/images/intro-logo.png";
 var logogradient = new Image();
-logogradient.src = "images/dropdowngradient.png";
+logogradient.src = "/games/team-test/images/intro-gradient.png";
 var tilesheet = new Image();
-tilesheet.src = "images/tileset.png";
+tilesheet.src = "/games/team-test/images/tileset.png";
 var p1img = new Image();
-p1img.src = "images/dude_red.png";
+p1img.src = "/games/team-test/images/player-red.png";
 var p2img = new Image();
-p2img.src = "images/dude_yellow.png";
+p2img.src = "/games/team-test/images/player-yellow.png";
 
 // Maps
 var map = [

@@ -1,4 +1,5 @@
-# To Do:
+# Ninja Slaughterhaus TODO
+
 * limit number of stars thrown per second / limit how many can be on screen
   * prevent users from spamming
   * make game harder
