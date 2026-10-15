@@ -47,11 +47,40 @@ pages. `index.html` and `portfolio.html` insert them with:
 
 Put each include comment on its own line. Vite expands the partials during local
 development and production builds, so the browser receives complete HTML.
-There is no browser JavaScript dependency for the header or footer.
+Navigation and social links are rendered as complete HTML; the theme toggle
+uses the small shared script in `partials/theme.html`.
 
 In the shared header, `data-page="about"` and `data-page="portfolio"` identify the
 navigation links. Vite sets `aria-current="page"` on the matching link based on
 the page filename, treating `index.html` as About.
+
+## Light and dark themes
+
+About and Portfolio have a sun/moon button in the bottom-right corner, both
+locally and in production. Light mode uses **Photo / Stone**; dark mode uses
+**Photo / Dusk**. Edit their colour variables in `css/themes.css`.
+
+The first visit follows the browser's system preference. Clicking the button
+saves a choice in browser storage and keeps it across navigation and reloads.
+The shared script in `partials/theme.html` applies it before the stylesheet loads
+to avoid flashing the other theme. The button's icon and accessible label describe
+the mode it will switch to. Without JavaScript, the pages display the light theme.
+Games keep their own styling.
+
+## Favicons
+
+The favicon combines two overlapping boulders with a bold SVG-path “E”, using
+the site colours. `favicon.svg` adapts to the browser's light/dark preference and
+can be used as the source artwork in a favicon generator.
+
+Both main pages include `partials/favicons.html`. The theme script selects
+`img/favicon-light.svg` or `img/favicon-dark.svg` so the browser-tab icon follows
+the site's sun/moon toggle, including a saved preference.
+
+`favicon.ico` contains 16px, 32px, and 48px fallbacks; `apple-touch-icon.png` is a
+180px light version with an opaque background for home-screen shortcuts. When
+changing the design, keep the three SVGs' paths consistent and regenerate these
+raster fallbacks.
 
 ## Pages and files
 
@@ -65,6 +94,26 @@ the page filename, treating `index.html` as About.
 
 The main pages share `css/style.css`, organized into site-wide, About, and
 Portfolio sections. Game styles stay in each game's own CSS folder.
+
+Below 768px, page shells have a 33rem width cap and 1.5rem minimum side gutters.
+The interests grid uses two or three columns according to its available width.
+Navigation and social links adapt to narrower content when text is enlarged.
+
+The portrait backdrop uses two decorative inline SVG boulders in `index.html`.
+Their colour follows `--color-portrait` in the selected theme. The photo and both
+shapes share a centred grid cell, with a circular photo crop. The front boulder
+rotates clockwise over 160 seconds; the back rotates counterclockwise over 200
+seconds. The About section of `css/style.css` controls their motion, and
+reduced-motion preferences keep both shapes still. The animation uses CSS
+transforms and needs no JavaScript.
+
+The portrait uses pre-cropped 320px, 512px, and 640px square images in AVIF, with WebP
+fallbacks. The browser chooses a size using `srcset` and `sizes`; the image stays
+high priority because it is visible on the first screen. `img/rockhouse.jpg` is
+kept as the original for future edits. To regenerate the crops in an image tool,
+use a 720px square starting at x=216, y=0 in the original, then export all three sizes.
+These exports are checked into Git, so image tools are not needed to run or build
+the site.
 
 Game pages are in `games/`. Each game's files live together in
 `games/temperature/`, `games/ninja/`, or `games/team-test/`:
@@ -86,12 +135,15 @@ updating it.
 
 Check affected pages, game interactions, and desktop/mobile layouts in your
 browser. Use the Console for JavaScript errors and Network for missing files.
+For the main pages, also check 320px layouts, 200% text enlargement, keyboard
+focus, and both colour themes. Font sizes use `rem`; body line height is 1.5.
 The main pages use CSS Grid and a locally hosted Inter font with
 `font-display: swap`. The font and SVG icons work without external requests.
 Ninja Slaughterhaus still loads jQuery for its game code. Inter’s font license is
 preserved in `licenses/inter.txt`.
-Icons are inline SVGs from Bootstrap Icons; their license is preserved in
-`licenses/bootstrap-icons.txt`.
+Social and trophy icons are inline SVGs from Bootstrap Icons; their license is
+preserved in `licenses/bootstrap-icons.txt`. The About and theme icons use small
+inline SVG paths and follow the active theme's colours.
 
 Keep site images, game audio, PDFs, and other source assets in Git so local
 previews and deployments have the same files. `.gitignore` covers dependencies

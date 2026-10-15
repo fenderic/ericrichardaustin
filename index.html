@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eric Richard Austin is a software engineer at For Purpose, based in Orewa, Auckland, New Zealand. Originally from Detroit, Michigan.">
+  <!-- include:favicons -->
+  <!-- include:theme -->
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   <title>About | Eric Richard Austin</title>
@@ -14,16 +17,104 @@
 
   <main class="page-shell about-layout">
     <div class="portrait">
-      <img src="/img/rockhouse.jpg" width="300" height="300" alt="Eric Richard Austin outdoors" fetchpriority="high">
+      <svg class="portrait-boulders" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" aria-hidden="true" focusable="false">
+        <path class="portrait-boulder portrait-boulder--back" d="
+          M86 27 149 16 Q158 14 167 18
+          L236 33 Q247 35 253 43
+          L307 85 Q315 92 318 103
+          L338 169 Q342 180 338 192
+          L316 257 Q313 268 302 275
+          L249 318 Q241 324 230 325
+          L153 340 Q140 342 130 337
+          L67 308 Q57 303 53 292
+          L21 232 Q16 222 19 210
+          L26 139 Q26 128 33 119
+          L64 47 Q70 32 86 27 Z" />
+        <path class="portrait-boulder portrait-boulder--front" d="
+          M76 57 143 35 Q152 32 161 34
+          L222 43 Q233 45 240 53
+          L289 91 Q298 98 301 109
+          L322 172 Q325 182 322 192
+          L307 251 Q304 262 294 269
+          L242 310 Q234 316 224 316
+          L151 329 Q141 331 132 326
+          L72 304 Q62 301 56 291
+          L31 238 Q26 228 28 218
+          L35 148 Q36 136 43 126
+          L62 74 Q66 61 76 57 Z" />
+      </svg>
+      <picture>
+        <source type="image/avif" srcset="/img/portrait-320.avif 320w, /img/portrait-512.avif 512w, /img/portrait-640.avif 640w" sizes="(min-width: 54rem) 18.24rem, (min-width: 48rem) calc(38vw - 2.28rem), (min-width: 27rem) 18.24rem, calc(76vw - 2.28rem)">
+        <img src="/img/portrait-320.webp" srcset="/img/portrait-320.webp 320w, /img/portrait-512.webp 512w, /img/portrait-640.webp 640w" sizes="(min-width: 54rem) 18.24rem, (min-width: 48rem) calc(38vw - 2.28rem), (min-width: 27rem) 18.24rem, calc(76vw - 2.28rem)" width="640" height="640" alt="Eric Richard Austin outdoors" fetchpriority="high">
+      </picture>
     </div>
     <section class="about-details" aria-label="About me">
       <h1>About Me</h1>
-      <h2>In a Nutshell</h2>
-      <p class="location-line">living in Orewa, Auckland, New Zealand</p>
-      <p>born in Detroit, Michigan, United States</p>
-      <p class="work-line">currently building meaningful sites with <strong><a href="https://www.forpurpose.co.nz/" target="_blank">For Purpose</a></strong>.</p>
-      <h2>Likes</h2>
-      <p>cats, going outside, nintendo, photography, craft beer, wes anderson films</p>
+      <ul class="about-facts" aria-label="Background and work" role="list">
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8 11h8l-1 7-3 3-3-3-1-7ZM8 12 5 9H3l2 4 3 1m8-2 3-3h2l-2 4-3 1" />
+            <path d="M9 11V7L6 4V2m3 5H5L3 5m12 6V7l3-3V2m-3 5h4l2-2M10 15h.01M14 15h.01M11 18h2" />
+          </svg>
+          <span>From Detroit, Michigan, USA.</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M16 8c-1-3-4-4-7-3-4 1-6 4-6 7 0 3 3 5 6 5 4 0 6-2 7-5l1-3h1a2.5 2.5 0 1 0-2-1Z" />
+            <path d="m20.5 7 2.5 7M8 17v4H6m2 0h2m3-5v5h-2m2 0h2M18 6.5h.01" />
+          </svg>
+          <span>Based in Orewa, Auckland, New Zealand.</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16" />
+          </svg>
+          <span>Software engineer at <strong><a href="https://www.forpurpose.co.nz/" target="_blank" rel="noopener">For Purpose</a></strong>.</span>
+        </li>
+      </ul>
+
+      <h2 id="outside-work-title">Outside work</h2>
+      <ul class="interests-list" aria-labelledby="outside-work-title" role="list">
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m3 20 9-16 9 16H3Zm5 0 4-7 4 7M12 4V2M2 20h20" />
+          </svg>
+          <span>Camping</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 17c4-1 5-4 6-8a6 6 0 0 1 11 0 3.5 3.5 0 0 0-7 1c0 4 4 6 8 6M2 20c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1" />
+          </svg>
+          <span>Surfing</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 8h12v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Zm12 1h2a3 3 0 1 1 0 6h-2M3 22h16M7 3v2m4-3v3m4-2v2" />
+          </svg>
+          <span>Coffee</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7.5 7h9a4 4 0 0 1 3.9 3.1l1.2 5.3a3 3 0 0 1-5.1 2.8L14 16h-4l-2.5 2.2a3 3 0 0 1-5.1-2.8l1.2-5.3A4 4 0 0 1 7.5 7ZM7.5 10v5M5 12.5h5m6-1h.01m1.99 2.5h.01" />
+          </svg>
+          <span>Gaming</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M2 20 10 4l5 9 3-5 4 12H2Zm5-10 3 2 2-2m4 3 2 2 1.5-1.5" />
+          </svg>
+          <span>Hiking</span>
+        </li>
+        <li>
+          <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 4c6-2 12 0 16 4L8 21 4 4Zm1 3c5-1 9 0 13 4" />
+            <circle cx="9" cy="11" r="1" />
+            <circle cx="13" cy="13" r="1" />
+            <circle cx="9" cy="16" r=".75" />
+          </svg>
+          <span>Pizza</span>
+        </li>
+      </ul>
     </section>
   </main>
 

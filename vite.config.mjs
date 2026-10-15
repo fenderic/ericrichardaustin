@@ -29,6 +29,7 @@ function htmlPartials() {
               .join('\n');
           },
         );
+
       },
     },
     configureServer(server) {
@@ -40,8 +41,9 @@ function htmlPartials() {
       });
     },
     buildStart() {
-      this.addWatchFile(resolve(partialsDirectory, 'header.html'));
-      this.addWatchFile(resolve(partialsDirectory, 'footer.html'));
+      for (const name of ['header.html', 'footer.html', 'theme.html', 'favicons.html']) {
+        this.addWatchFile(resolve(partialsDirectory, name));
+      }
     },
   };
 }
@@ -56,7 +58,7 @@ function copyStaticFiles() {
     },
     async writeBundle() {
       // Keep game URLs, image preview links, and downloads at their original paths.
-      for (const name of ['games', 'img', 'licenses', 'LICENSE', 'favicon.ico', 'eric-richard-austin-resume.pdf']) {
+      for (const name of ['games', 'img', 'licenses', 'LICENSE', 'favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'eric-richard-austin-resume.pdf']) {
         await cp(resolve(root, name), resolve(outputDirectory, name), { recursive: true });
       }
     },

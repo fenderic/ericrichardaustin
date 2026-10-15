@@ -1,0 +1,33 @@
+/* Light: Photo / Stone. Dark: Photo / Dusk.
+   The shared theme script sets data-theme before the page renders.
+   Some text shades are adjusted for contrast. Game styles are independent. */
+
+/* https://coolors.co/d2d0c4-305f80-675448-686466-99949a */
+:root {
+  color-scheme: light;
+  --color-background: #d2d0c4;
+  --color-text: #484447;
+  --color-heading: #305f80;
+  --color-link: #604d41;
+  --color-link-hover: #294f6b;
+  --color-link-active: #484447;
+  --color-accent: #294f6b;
+  --color-subheading: #604d41;
+  --color-rule: #686466;
+  --color-portrait: #99949a;
+}
+
+/* https://coolors.co/143247-33322b-675448-3a4c5b-70776e */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background: #143247;
+  --color-text: #d2d0c4;
+  --color-heading: #f4f0e6;
+  --color-link: #f4f0e6;
+  --color-link-hover: #d4b89f;
+  --color-link-active: #c4cbbb;
+  --color-accent: #d4b89f;
+  --color-subheading: #c4cbbb;
+  --color-rule: #7b8278;
+  --color-portrait: #3a4c5b;
+}

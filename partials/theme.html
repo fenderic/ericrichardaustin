@@ -1,0 +1,48 @@
+<script>
+  (() => {
+    const storageKey = 'eric-site-theme';
+    const root = document.documentElement;
+    const preference = window.matchMedia('(prefers-color-scheme: dark)');
+    const isTheme = (value) => value === 'light' || value === 'dark';
+    let saved;
+
+    try {
+      saved = localStorage.getItem(storageKey);
+    } catch {
+      // Theme switching still works when browser storage is unavailable.
+    }
+
+    function applyTheme(theme) {
+      root.dataset.theme = theme;
+      const favicon = document.querySelector('#site-favicon');
+      if (favicon) favicon.href = `/img/favicon-${theme}.svg`;
+      const button = document.querySelector('.theme-toggle');
+      if (!button) return;
+      const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      button.setAttribute('aria-label', label);
+      button.title = label;
+      button.hidden = false;
+    }
+
+    applyTheme(isTheme(saved) ? saved : preference.matches ? 'dark' : 'light');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.querySelector('.theme-toggle');
+      if (!button) return;
+      applyTheme(root.dataset.theme);
+      button.addEventListener('click', () => {
+        saved = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(saved);
+        try {
+          localStorage.setItem(storageKey, saved);
+        } catch {
+          // Keep the selection for this page even without browser storage.
+        }
+      });
+    }, { once: true });
+
+    preference.addEventListener('change', (event) => {
+      if (!isTheme(saved)) applyTheme(event.matches ? 'dark' : 'light');
+    });
+  })();
+</script>
